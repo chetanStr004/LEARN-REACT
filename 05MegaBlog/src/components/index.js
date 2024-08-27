@@ -1,7 +1,7 @@
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Container from "./container/contain";
-import Logo from "./logo";
+// import Logo from "./logo";
 import LogoutBtn from "./Header/logoutBtn";
 import Signup from "./SignUp";
 import Login from "./Login";
