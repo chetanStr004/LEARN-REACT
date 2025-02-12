@@ -1,0 +1,11 @@
+
+Command: shopt -s histappend
+Output:
+
+Exit Code: 0
+----
+Command: pwd
+Output:
+/Users/chetankumarsuthar/Documents/GitHub/LEARN-REACT
+Exit Code: 0
+----
