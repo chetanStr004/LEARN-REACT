@@ -1,0 +1,42 @@
+import React, { useState } from 'react'
+
+function Login() {
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const submitHandler = (e) =>{
+        e.preventDefault();
+        console.log("email is ", email)
+        console.log("password is ", password)
+
+        setEmail('')
+        setPassword('')
+    }
+  return (
+    <div className='relative flex h-screen w-screen items-center justify-center'>
+        <h1 className='absolute top-20 text-8xl font-semibold text-blue-200 font-serif'>Log in</h1>
+        <div className='rounded-xl border-2 border-emerald-600 p-20'>
+            <form onSubmit={(e) =>{
+                submitHandler(e);
+            }}
+             className='flex flex-col items-center justify-center'>
+                <input 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required 
+                className='border-2 outline-none bg-transparent border-emerald-600 text-xl py-3 px-5 rounded-full placeholder:text-gray-400' type="email" placeholder='Enter your email' />
+                <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required 
+                className='border-2 outline-none bg-transparent border-emerald-600 text-xl py-3 px-5 rounded-full mt-3 placeholder:text-gray-400' type="password" placeholder='Enter your password' />
+                <button className='mt-7 border-none outline-none  bg-emerald-600 text-xl py-3 px-8 w-full rounded-full placeholder:text-gray-400'>Log in</button>
+            </form>
+        </div>
+    </div>
+  )
+}
+
+export default Login
+
