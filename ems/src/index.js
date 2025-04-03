@@ -3,18 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AuthContext from './context/AuthContext';
-import TaskContext from './context/TaskContext';
+import AuthProvider from './context/AuthProvider';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AuthContext>
-      <TaskContext>
-      <App />
-      </TaskContext>
-    </AuthContext>
+   <AuthProvider>
+    <App />
+   </AuthProvider>
   </React.StrictMode>
 );
 
